@@ -1,0 +1,107 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F5F5F5;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+header img {
+    max-width: 200px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+label {
+    position: absolute;
+    left: -9999px; /* Hidden visually but accessible for screen readers */
+}
+
+input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 5px 0 0 5px;
+    width: 250px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FF0000;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #CC0000; /* Darker red on hover */
+}
+
+.social-media {
+    margin-bottom: 40px;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 32px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #000000;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    form {
+        flex-direction: column;
+    }
+    input[type="email"] {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    button {
+        width: 100%;
+        border-radius: 5px;
+    }
+}
