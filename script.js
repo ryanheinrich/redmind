@@ -1,16 +1,22 @@
-// Toggle mobile menu
-document.querySelector('.hamburger').addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.toggle('active');
-});
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contact-form');
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-        // Close mobile menu after clicking a link
-        document.querySelector('.nav-links').classList.remove('active');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = form.querySelector('#name').value.trim();
+      const email = form.querySelector('#email').value.trim();
+      const message = form.querySelector('#message').value.trim();
+
+      if (!name || !email || !message) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      // Placeholder — replace with real form handling / API call
+      alert('Thank you. Your message has been received. We will respond shortly.');
+      form.reset();
     });
+  }
 });
